@@ -42,6 +42,7 @@ h4 {
   color: #2e3333;
   font-size: 18px;
   margin-bottom: 10px;
+  line-height: 16px;
 }
 .align-h {
   display: flex;
@@ -55,6 +56,7 @@ h4 {
 
 .intro {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .intro img {
