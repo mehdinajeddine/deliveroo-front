@@ -37,7 +37,9 @@ function App() {
     } catch (error) {
       console.log("no data in cache : " + error.message);
     }
-    setPanier(data);
+    if (data != undefined) {
+      setPanier(data);
+    }
   };
 
   const updateCart = (data) => {
