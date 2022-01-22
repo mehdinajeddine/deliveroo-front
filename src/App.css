@@ -66,10 +66,12 @@ h3 {
   background-color: #ffffff;
   margin-right: 20px;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .produit .thumbnail {
   width: 132px;
   height: 132px;
   object-fit: cover;
+  border-radius: 10px;
 }
