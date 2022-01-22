@@ -50,7 +50,7 @@ const Panier = ({ data, callback }) => {
     <div className="Panier">
       <Paper elevation={3}>
         <Button>Valider mon panier</Button>
-        {data.length > 0 ? (
+        {data && data.length > 0 ? (
           data.map((item, index) => {
             return (
               <div key={index} className="align-h">
