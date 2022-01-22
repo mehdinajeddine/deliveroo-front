@@ -37,7 +37,7 @@ function App() {
     } catch (error) {
       console.log("no data in cache : " + error.message);
     }
-    if (data != undefined) {
+    if (data !== undefined) {
       setPanier(data);
     }
   };
