@@ -30,7 +30,7 @@ function App() {
   };
 
   const getDataLocally = async () => {
-    const data = [];
+    let data = [];
     try {
       data = await get("cart");
       console.log("data get locally : ", data);
