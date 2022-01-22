@@ -49,27 +49,31 @@ const Panier = ({ data, callback }) => {
     <div className="Panier">
       <Paper elevation={3}>
         <Button>Valider mon panier</Button>
-        {data.map((item, index) => {
-          return (
-            <div key={index} className="align-h">
-              <div className="align-h">
-                <Button data-id={item.id} onClick={handClickLess}>
-                  -
-                </Button>
-                <Input
-                  name={item.id}
-                  size="small"
-                  value={item.value}
-                  onChange={handleChange}
-                />
-                <Button data-id={item.id} onClick={handClickAdd}>
-                  +
-                </Button>
+        {data.length > 0 ? (
+          data.map((item, index) => {
+            return (
+              <div key={index} className="align-h">
+                <div className="align-h">
+                  <Button data-id={item.id} onClick={handClickLess}>
+                    -
+                  </Button>
+                  <Input
+                    name={item.id}
+                    size="small"
+                    value={item.value}
+                    onChange={handleChange}
+                  />
+                  <Button data-id={item.id} onClick={handClickAdd}>
+                    +
+                  </Button>
+                </div>
+                <div>{item.name}</div>
               </div>
-              <div>{item.name}</div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <div>Votre panier est vide</div>
+        )}
       </Paper>
     </div>
   );
