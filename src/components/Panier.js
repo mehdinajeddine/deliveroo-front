@@ -37,7 +37,7 @@ const Panier = ({ data, callback }) => {
       if (item.id === e.target.name) {
         item.value = e.target.value;
       }
-      if (e.target.value != 0) {
+      if (e.target.value !== 0) {
         return item;
       }
     });
