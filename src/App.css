@@ -1,0 +1,75 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  margin-top: 20px;
+}
+
+main {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 19px;
+  color: #868a8a;
+  line-height: 30px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #2e3333;
+  line-height: 20px;
+  margin: 20px 0 20px 0;
+}
+
+/* Specific */
+
+.logo {
+  height: 50px;
+}
+
+.intro {
+  display: flex;
+}
+
+.intro img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.produits {
+  background-color: #f4f5f5;
+}
+.Repas {
+  display: flex;
+  flex-wrap: wrap;
+}
+.produit {
+  width: 400px;
+  height: 160px;
+  display: flex;
+  background-color: #ffffff;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.produit .thumbnail {
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+}
