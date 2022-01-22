@@ -48,13 +48,16 @@ function App() {
   const addItemToCart = (newItem) => {
     let flag = false;
     newItem.value = 1;
-    let newTab = panier.map((item) => {
-      if (item.id === newItem.id) {
-        flag = true;
-        item.value++;
-      }
-      return item;
-    });
+    let newTab = [];
+    if (panier && panier.length > 0) {
+      newTab = panier.map((item) => {
+        if (item.id === newItem.id) {
+          flag = true;
+          item.value++;
+        }
+        return item;
+      });
+    }
     if (!flag) {
       newTab = [...panier, newItem];
     }
