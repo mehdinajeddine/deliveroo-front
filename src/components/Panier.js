@@ -40,6 +40,7 @@ const Panier = ({ data, callback }) => {
       if (e.target.value !== 0) {
         return item;
       }
+      return item;
     });
     callback(newTab);
     // console.log("new Value : ", e.target.value);
