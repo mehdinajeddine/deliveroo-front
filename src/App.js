@@ -30,13 +30,14 @@ function App() {
   };
 
   const getDataLocally = async () => {
+    const data = [];
     try {
       const data = await get("cart");
       console.log("data get locally : ", data);
-      setPanier(data);
     } catch (error) {
       console.log("no data in cache : " + error.message);
     }
+    setPanier(data);
   };
 
   const updateCart = (data) => {
