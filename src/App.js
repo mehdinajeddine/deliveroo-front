@@ -4,6 +4,7 @@ import axios from "axios";
 import logo from "./logo.svg";
 import Restaurant from "./components/Restaurant";
 import Panier from "./components/Panier";
+import { set, get } from "idb-keyval";
 
 function App() {
   const [data, setData] = useState([]);
@@ -19,7 +20,29 @@ function App() {
     };
 
     getRestaurantData();
+    getDataLocally();
   }, []);
+
+  const saveDataLocally = async (data) => {
+    await set("cart", data)
+      .then(() => console.log("Cart saved locally"))
+      .catch((err) => console.log("Impossible to save locally", err));
+  };
+
+  const getDataLocally = async () => {
+    try {
+      const data = await get("cart");
+      console.log("data get locally : ", data);
+      setPanier(data);
+    } catch (error) {
+      console.log("no data in cache : " + error.message);
+    }
+  };
+
+  const updateCart = (data) => {
+    setPanier(data);
+    saveDataLocally(data);
+  };
 
   const addItemToCart = (newItem) => {
     let flag = false;
@@ -35,6 +58,7 @@ function App() {
       newTab = [...panier, newItem];
     }
     setPanier(newTab);
+    saveDataLocally(newTab);
   };
 
   return (
@@ -44,7 +68,7 @@ function App() {
       </header>
       <hr />
       <main>
-        <Panier data={panier} callback={setPanier} />
+        <Panier data={panier} callback={updateCart} />
         {isLoading ? (
           <div>Loading...</div>
         ) : (
