@@ -25,7 +25,7 @@ function App() {
     let flag = false;
     newItem.value = 1;
     let newTab = panier.map((item) => {
-      if (item.id == newItem.id) {
+      if (item.id === newItem.id) {
         flag = true;
         item.value++;
       }

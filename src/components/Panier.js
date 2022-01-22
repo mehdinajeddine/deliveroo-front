@@ -7,7 +7,7 @@ const Panier = ({ data, callback }) => {
     e.preventDefault();
 
     let newTab = data.filter((item) => {
-      if (item.id == e.target.dataset.id) {
+      if (item.id === e.target.dataset.id) {
         if (item.value > 1) {
           item.value--;
         } else {
@@ -23,7 +23,7 @@ const Panier = ({ data, callback }) => {
     e.preventDefault();
 
     let newTab = data.filter((item) => {
-      if (item.id == e.target.dataset.id) {
+      if (item.id === e.target.dataset.id) {
         item.value++;
       }
       return item;
@@ -34,7 +34,7 @@ const Panier = ({ data, callback }) => {
   const handleChange = (e) => {
     e.preventDefault();
     let newTab = data.filter((item) => {
-      if (item.id == e.target.name) {
+      if (item.id === e.target.name) {
         item.value = e.target.value;
       }
       if (e.target.value != 0) {
