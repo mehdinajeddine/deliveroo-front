@@ -37,6 +37,16 @@ h3 {
   margin: 20px 0 20px 0;
 }
 
+h4 {
+  font-weight: 300;
+  color: #2e3333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.align-h {
+  display: flex;
+  align-items: center;
+}
 /* Specific */
 
 .logo {
@@ -50,6 +60,10 @@ h3 {
 .intro img {
   width: 350px;
   border-radius: 10px;
+}
+
+.Cat {
+  padding-top: 20px;
 }
 
 .produits {
@@ -67,6 +81,7 @@ h3 {
   margin-right: 20px;
   padding: 20px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .produit .thumbnail {
@@ -74,4 +89,28 @@ h3 {
   height: 132px;
   object-fit: cover;
   border-radius: 10px;
+}
+.produit .desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #808484;
+  line-height: 18px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.produit .price {
+  color: #808484;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.produit .popular {
+  color: #ff8000;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.produit .produit-info {
+  flex: 1;
 }

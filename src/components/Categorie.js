@@ -3,7 +3,7 @@ import Repas from "./Repas";
 
 const Categorie = ({ title, produits }) => {
   return (
-    <div>
+    <div className="Cat">
       <h3>{title}</h3>
       <div className="Repas">
         {produits.map((item, index) => {

@@ -3,12 +3,12 @@ import React from "react";
 const Repas = ({ data }) => {
   return (
     <div className="produit">
-      <div>
+      <div className="produit-info">
         <h4>{data.title}</h4>
-        <p>{data.description}</p>
-        <div>
-          <p>{data.price}</p>
-          <p>{data.popular && <span>Pouplaire</span>}</p>
+        <p className="desc">{data.description.slice(0, 120)}</p>
+        <div className="align-h">
+          <p className="price">{data.price} €</p>
+          <p className="popular">{data.popular && <span>Pouplaire</span>}</p>
         </div>
       </div>
       <div>

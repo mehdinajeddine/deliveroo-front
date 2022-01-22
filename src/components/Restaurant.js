@@ -4,7 +4,7 @@ import Categorie from "./Categorie";
 const Restaurant = ({ restaurant, categories }) => {
   return (
     <div>
-      <section className="intro">
+      <section className="intro container">
         <div>
           <h1>{restaurant.name}</h1>
           <h2>{restaurant.description}</h2>
@@ -16,8 +16,10 @@ const Restaurant = ({ restaurant, categories }) => {
       <section className="produits">
         <div className="container">
           {categories.map((item, index) => {
-            return (
+            return item.meals.length > 0 ? (
               <Categorie key={index} title={item.name} produits={item.meals} />
+            ) : (
+              <></>
             );
           })}
         </div>
