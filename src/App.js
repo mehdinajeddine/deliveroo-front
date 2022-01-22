@@ -3,10 +3,12 @@ import "./App.css";
 import axios from "axios";
 import logo from "./logo.svg";
 import Restaurant from "./components/Restaurant";
+import Panier from "./components/Panier";
 
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [panier, setPanier] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -32,8 +34,10 @@ function App() {
           <Restaurant
             restaurant={data.restaurant}
             categories={data.categories}
+            callback={setPanier}
           />
         )}
+        <Panier data={panier} callback={setPanier} />
       </main>
     </div>
   );

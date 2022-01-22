@@ -1,8 +1,16 @@
 import React from "react";
 
-const Repas = ({ data }) => {
+const Repas = ({ data, callback }) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("---> ", event.target);
+    const newData = [...data];
+    newData.push({ name: "titi" });
+    callback(newData);
+  };
+
   return (
-    <div className="produit">
+    <div className="produit" onClick={handleClick}>
       <div className="produit-info">
         <h4>{data.title}</h4>
         <p className="desc">{data.description.slice(0, 120)}</p>

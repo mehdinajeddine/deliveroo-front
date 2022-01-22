@@ -84,6 +84,7 @@ h4 {
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .produit .thumbnail {
@@ -115,4 +116,13 @@ h4 {
 
 .produit .produit-info {
   flex: 1;
+}
+
+.Panier {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 355px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
 }

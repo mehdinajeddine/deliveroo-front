@@ -1,7 +1,7 @@
 import React from "react";
 import Categorie from "./Categorie";
 
-const Restaurant = ({ restaurant, categories }) => {
+const Restaurant = ({ restaurant, categories, callback }) => {
   return (
     <div>
       <section className="intro container">
@@ -17,7 +17,12 @@ const Restaurant = ({ restaurant, categories }) => {
         <div className="container">
           {categories.map((item, index) => {
             return item.meals.length > 0 ? (
-              <Categorie key={index} title={item.name} produits={item.meals} />
+              <Categorie
+                key={index}
+                title={item.name}
+                produits={item.meals}
+                callback={callback}
+              />
             ) : (
               <></>
             );
