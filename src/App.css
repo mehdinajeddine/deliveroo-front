@@ -14,6 +14,7 @@ header {
 
 main {
   margin-top: 40px;
+  position: relative;
 }
 
 h1 {
@@ -120,9 +121,12 @@ h4 {
 
 .Panier {
   position: fixed;
-  right: 0;
-  top: 0;
+  right: 20px;
   width: 355px;
-  border: 1px solid #000000;
   background-color: #ffffff;
+  margin-top: 200px;
+}
+
+.Panier input {
+  width: 20px;
 }

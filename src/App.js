@@ -21,6 +21,22 @@ function App() {
     getRestaurantData();
   }, []);
 
+  const addItemToCart = (newItem) => {
+    let flag = false;
+    newItem.value = 1;
+    let newTab = panier.map((item) => {
+      if (item.id == newItem.id) {
+        flag = true;
+        item.value++;
+      }
+      return item;
+    });
+    if (!flag) {
+      newTab = [...panier, newItem];
+    }
+    setPanier(newTab);
+  };
+
   return (
     <div className="App">
       <header className="container">
@@ -28,16 +44,16 @@ function App() {
       </header>
       <hr />
       <main>
+        <Panier data={panier} callback={setPanier} />
         {isLoading ? (
           <div>Loading...</div>
         ) : (
           <Restaurant
             restaurant={data.restaurant}
             categories={data.categories}
-            callback={setPanier}
+            callback={addItemToCart}
           />
         )}
-        <Panier data={panier} callback={setPanier} />
       </main>
     </div>
   );

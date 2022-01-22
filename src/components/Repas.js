@@ -3,10 +3,14 @@ import React from "react";
 const Repas = ({ data, callback }) => {
   const handleClick = (event) => {
     event.preventDefault();
-    console.log("---> ", event.target);
-    const newData = [...data];
-    newData.push({ name: "titi" });
-    callback(newData);
+    // console.log("---> ", event.target);
+    // const newData = [...panier];
+    // newData.push({ name: "titi" });
+    // console.log("call back :");
+    // console.log(callback);
+    // callback(newData);
+    console.log("item data : ", data.title, " ", data.id);
+    callback({ name: data.title, id: data.id });
   };
 
   return (

@@ -24,7 +24,7 @@ const Restaurant = ({ restaurant, categories, callback }) => {
                 callback={callback}
               />
             ) : (
-              <></>
+              <div key={index}></div>
             );
           })}
         </div>
