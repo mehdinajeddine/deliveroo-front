@@ -7,7 +7,7 @@ const Categorie = ({ title, produits, callback }) => {
       <h3>{title}</h3>
       <div className="Repas">
         {produits.map((item, index) => {
-          return <Repas data={item} key={index} callback={callback} />;
+          return <Repas data={item} key={item.id} callback={callback} />;
         })}
       </div>
     </div>
